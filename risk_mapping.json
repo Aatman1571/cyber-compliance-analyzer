@@ -1,0 +1,483 @@
+{
+  "password_length": {
+    "cyber_risk": "High",
+    "legal_risk": {
+      "GDPR": "GDPR Article 32 Violation",
+      "PCI-DSS": "PCI-DSS Requirement 8 Non-Compliance",
+      "HIPAA": "HIPAA Technical Safeguard Violation",
+      "SOC 2": "SOC 2 Logical Access Control Weakness"
+    },
+    "recommendation": "Enforce a password policy with a minimum of 12 characters.",
+    "impact_estimate_usd": 50000,
+    "recommendations": {
+      "IT": "Enforce a password policy with a minimum of 12 characters.",
+      "Legal": "Legal should ensure compliance for 'Password Length' is reflected in contracts and regulatory documents.",
+      "Compliance": "Compliance team should verify 'Password Length' control implementation and maintain evidence for audits."
+    }
+  },
+  "mfa_enabled": {
+    "cyber_risk": "Very High",
+    "legal_risk": {
+      "HIPAA": "HIPAA Access Control Violation",
+      "PCI-DSS": "PCI-DSS Requirement 8.3 Failure",
+      "SOC 2": "SOC 2 Logical Access Failure",
+      "GDPR": "GDPR Article 32 Multi-Factor Requirement"
+    },
+    "recommendation": "Enable MFA across all accounts.",
+    "impact_estimate_usd": 100000,
+    "recommendations": {
+      "IT": "Enable MFA across all accounts.",
+      "Legal": "Legal should ensure compliance for 'Mfa Enabled' is reflected in contracts and regulatory documents.",
+      "Compliance": "Compliance team should verify 'Mfa Enabled' control implementation and maintain evidence for audits."
+    }
+  },
+  "data_encryption": {
+    "cyber_risk": "Critical",
+    "legal_risk": {
+      "GDPR": "GDPR Article 32 Encryption Failure",
+      "HIPAA": "HIPAA Transmission Security Violation",
+      "PCI-DSS": "PCI-DSS Requirement 3 Violation",
+      "SOC 2": "SOC 2 Encryption Control Failure"
+    },
+    "recommendation": "Encrypt data at rest and in transit.",
+    "impact_estimate_usd": 200000,
+    "recommendations": {
+      "IT": "Encrypt data at rest and in transit.",
+      "Legal": "Legal should ensure compliance for 'Data Encryption' is reflected in contracts and regulatory documents.",
+      "Compliance": "Compliance team should verify 'Data Encryption' control implementation and maintain evidence for audits."
+    }
+  },
+  "account_lockout_threshold": {
+    "cyber_risk": "High",
+    "legal_risk": {
+      "PCI-DSS": "PCI-DSS Requirement 8.1.6 Breach",
+      "SOC 2": "SOC 2 Access Control Weakness",
+      "HIPAA": "HIPAA Account Lockout Requirement",
+      "GDPR": "GDPR Unauthorized Access Prevention Failure"
+    },
+    "recommendation": "Lock accounts after 5 failed login attempts.",
+    "impact_estimate_usd": 30000,
+    "recommendations": {
+      "IT": "Lock accounts after 5 failed login attempts.",
+      "Legal": "Legal should ensure compliance for 'Account Lockout Threshold' is reflected in contracts and regulatory documents.",
+      "Compliance": "Compliance team should verify 'Account Lockout Threshold' control implementation and maintain evidence for audits."
+    }
+  },
+  "log_retention_period_days": {
+    "cyber_risk": "Medium",
+    "legal_risk": {
+      "HIPAA": "HIPAA Audit Controls Non-Compliance",
+      "SOC 2": "SOC 2 Audit Logging Inadequacy",
+      "GDPR": "GDPR Audit Log Retention Non-Compliance",
+      "PCI-DSS": "PCI-DSS Requirement 10.7 Logging Violation"
+    },
+    "recommendation": "Retain security logs for at least 1 year.",
+    "impact_estimate_usd": 25000,
+    "recommendations": {
+      "IT": "Retain security logs for at least 1 year.",
+      "Legal": "Legal should ensure compliance for 'Log Retention Period Days' is reflected in contracts and regulatory documents.",
+      "Compliance": "Compliance team should verify 'Log Retention Period Days' control implementation and maintain evidence for audits."
+    }
+  },
+  "backup_frequency_days": {
+      "cyber_risk": "High",
+      "legal_risk": {
+        "GDPR": "GDPR Business Continuity Planning Gap",
+        "HIPAA": "HIPAA Contingency Plan Violation",
+        "SOC 2": "SOC 2 Data Backup Deficiency",
+        "PCI-DSS": "PCI-DSS Requirement 12.10 Backup Procedure Gap"
+      },
+      "recommendation": "Backup systems weekly.",
+      "impact_estimate_usd": 50000,
+      "recommendations": {
+        "IT": "Ensure automated weekly backups are configured and monitored.",
+        "Legal": "Review data backup SLAs with third-party vendors and ensure they meet compliance standards.",
+        "Compliance": "Verify documented procedures for backup frequency and test restoration regularly."
+      }
+    },
+    "dlp_system_enabled": {
+      "cyber_risk": "Very High",
+      "legal_risk": {
+        "GDPR": "GDPR Data Loss Breach",
+        "HIPAA": "HIPAA Data Loss Violation",
+        "SOC 2": "SOC 2 Data Protection Failure",
+        "PCI-DSS": "PCI-DSS Data Loss Prevention Gap"
+      },
+      "recommendation": "Implement a DLP system.",
+      "impact_estimate_usd": 150000,
+      "recommendations": {
+        "IT": "Deploy and configure Data Loss Prevention tools across endpoints and networks.",
+        "Legal": "Ensure vendor contracts include DLP measures for third-party data handling.",
+        "Compliance": "Audit and validate the operational effectiveness of DLP policies."
+      }
+    },
+    "employee_training_frequency_days": {
+      "cyber_risk": "High",
+      "legal_risk": {
+        "HIPAA": "HIPAA Workforce Training Violation",
+        "SOC 2": "SOC 2 Security Awareness Gap",
+        "PCI-DSS": "PCI-DSS Requirement 12.6 Violation",
+        "GDPR": "GDPR Article 39 Staff Awareness Gap"
+      },
+      "recommendation": "Conduct cybersecurity awareness training annually.",
+      "impact_estimate_usd": 40000,
+      "recommendations": {
+        "IT": "Coordinate with HR to conduct and track mandatory cybersecurity training.",
+        "Legal": "Review training content for regulatory language and contractual obligations.",
+        "Compliance": "Maintain evidence of completed trainings and monitor training frequency."
+      }
+    },
+    "credit_card_data_encryption": {
+      "cyber_risk": "Critical",
+      "legal_risk": {
+        "PCI-DSS": "PCI-DSS Requirement 3 Failure",
+        "HIPAA": "HIPAA Payment Encryption Irregularity",
+        "GDPR": "GDPR Article 5 Payment Data Insecurity",
+        "SOC 2": "SOC 2 Credit Card Data Mismanagement"
+      },
+      "recommendation": "Encrypt stored credit card data.",
+      "impact_estimate_usd": 250000,
+      "recommendations": {
+        "IT": "Ensure all stored credit card data is encrypted using PCI-DSS compliant algorithms.",
+        "Legal": "Review merchant and payment processor agreements for encryption clauses.",
+        "Compliance": "Conduct regular audits of credit card storage and encryption policies."
+      }
+    },
+    "system_access_review_frequency_days": {
+      "cyber_risk": "Medium",
+      "legal_risk": {
+        "SOC 2": "SOC 2 Logical Access Review Inadequacy",
+        "HIPAA": "HIPAA Access Review Failure",
+        "GDPR": "GDPR Access Rights Mismanagement",
+        "PCI-DSS": "PCI-DSS Access Review Schedule Breach"
+      },
+      "recommendation": "Review system access rights quarterly.",
+      "impact_estimate_usd": 20000,
+      "recommendations": {
+        "IT": "Automate access review reports and flag anomalies for review.",
+        "Legal": "Validate employee access policies in relation to contracts and liability.",
+        "Compliance": "Document access reviews and ensure they are conducted on schedule."
+      }
+  },
+  "session_timeout_minutes": {
+    "cyber_risk": "Medium",
+    "recommendation": "Session timeout after 15 minutes of inactivity.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "PCI-DSS": "PCI-DSS reference: Requirement 8.1.8",
+      "SOC 2": "SOC 2 reference: CC6.2"
+    },
+    "recommendations": {
+      "IT": "Configure session timeout policies in applications and infrastructure.",
+      "Legal": "Ensure session timeout policies align with user privacy agreements.",
+      "Compliance": "Include session timeout controls in regular security audits."
+    }
+  },
+  "incident_response_plan_tested": {
+    "cyber_risk": "Medium",
+    "recommendation": "Test the incident response plan annually.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.308(a)(6)(ii)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 12.10.2",
+      "SOC 2": "SOC 2 reference: CC7.3"
+    },
+    "recommendations": {
+      "IT": "Run tabletop and live incident response simulations annually.",
+      "Legal": "Review notification obligations in contracts and regulations.",
+      "Compliance": "Document IR testing results and track improvement actions."
+    }
+  },
+  "third_party_risk_assessment_frequency_days": {
+    "cyber_risk": "Medium",
+    "recommendation": "Conduct vendor risk assessments annually.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "GDPR": "GDPR reference: Article 28",
+      "HIPAA": "HIPAA reference: 164.308(b)(1)",
+      "SOC 2": "SOC 2 reference: CC9.2"
+    },
+    "recommendations": {
+      "IT": "Evaluate third-party security posture using questionnaires or tools.",
+      "Legal": "Review and update Data Processing Agreements (DPAs).",
+      "Compliance": "Maintain vendor risk assessments and mitigation logs."
+    }
+  },
+  "vulnerability_scan_frequency_days": {
+    "cyber_risk": "Medium",
+    "recommendation": "Perform vulnerability scans at least quarterly.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "PCI-DSS": "PCI-DSS reference: Requirement 11.2",
+      "SOC 2": "SOC 2 reference: CC7.1"
+    },
+    "recommendations": {
+      "IT": "Schedule regular automated scans and patch vulnerabilities.",
+      "Legal": "Ensure security clauses in contracts cover vulnerability remediation.",
+      "Compliance": "Include scan results in compliance reports and audits."
+    }
+  },
+  "penetration_test_frequency_days": {
+    "cyber_risk": "Medium",
+    "recommendation": "Conduct penetration testing annually.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "PCI-DSS": "PCI-DSS reference: Requirement 11.3",
+      "SOC 2": "SOC 2 reference: CC7.1"
+    },
+    "recommendations": {
+      "IT": "Hire certified testers or internal red teams to conduct tests.",
+      "Legal": "Include breach liability clauses based on pentest results.",
+      "Compliance": "Retain testing results and track remediation."
+    }
+  },
+  "data_subject_request_response_days": {
+    "cyber_risk": "Medium",
+    "recommendation": "Respond to data subject access requests within 30 days.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "GDPR": "GDPR reference: Article 12"
+    },
+    "recommendations": {
+      "IT": "Establish systems to locate and retrieve subject data efficiently.",
+      "Legal": "Review legal deadlines and documentation required for DSARs.",
+      "Compliance": "Track DSAR requests and ensure timely closure."
+    }
+  },
+  "data_retention_policy_defined": {
+    "cyber_risk": "Medium",
+    "recommendation": "Define and enforce a data retention policy.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "GDPR": "GDPR reference: Article 5",
+      "HIPAA": "HIPAA reference: 164.306(b)"
+    },
+    "recommendations": {
+      "IT": "Ensure systems enforce data deletion schedules.",
+      "Legal": "Review retention limits by jurisdiction and industry.",
+      "Compliance": "Publish and review data retention policies regularly."
+    }
+  },
+  "business_continuity_plan_reviewed": {
+    "cyber_risk": "Medium",
+    "recommendation": "Review business continuity plans annually.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "SOC 2": "SOC 2 reference: CC7.2"
+    },
+    "recommendations": {
+      "IT": "Ensure recovery infrastructure is tested and operational.",
+      "Legal": "Verify continuity plans are covered in key client agreements.",
+      "Compliance": "Maintain documented business continuity test results."
+    }
+  },
+  "disaster_recovery_plan_tested": {
+    "cyber_risk": "Medium",
+    "recommendation": "Test disaster recovery plans annually.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "SOC 2": "SOC 2 reference: CC7.2"
+    },
+    "recommendations": {
+      "IT": "Conduct full failover tests annually and resolve gaps.",
+      "Legal": "Confirm contractual DR obligations with vendors and clients.",
+      "Compliance": "Include DR test reports in compliance documentation."
+    }
+  },
+  "portable_device_encryption": {
+    "cyber_risk": "Medium",
+    "recommendation": "Encrypt portable devices like laptops and mobile devices.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "GDPR": "GDPR reference: Article 32",
+      "HIPAA": "HIPAA reference: 164.310(d)(2)(iv)"
+    },
+    "recommendations": {
+      "IT": "Use endpoint management tools to enforce disk encryption.",
+      "Legal": "Confirm encryption clauses in BYOD and employee policies.",
+      "Compliance": "Ensure encryption coverage is reported during audits."
+    }
+  },
+  "antivirus_installed": {
+    "cyber_risk": "Medium",
+    "recommendation": "Install and maintain antivirus software.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.308(a)(5)(B)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 5"
+    },
+    "recommendations": {
+      "IT": "Deploy and maintain up-to-date antivirus/EDR solutions across all endpoints.",
+      "Legal": "Ensure security requirements are included in vendor agreements.",
+      "Compliance": "Validate antivirus coverage during internal audits."
+    }
+  },
+  "firewall_enabled": {
+    "cyber_risk": "Medium",
+    "recommendation": "Enable firewalls to protect network perimeters.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.312(c)(1)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 1"
+    },
+    "recommendations": {
+      "IT": "Ensure firewalls are configured with deny-by-default rules.",
+      "Legal": "Review obligations related to perimeter security in SLAs.",
+      "Compliance": "Include firewall reviews in periodic compliance checks."
+    }
+  },
+  "admin_account_review_frequency_days": {
+    "cyber_risk": "Medium",
+    "recommendation": "Review admin account usage quarterly.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "SOC 2": "SOC 2 reference: CC6.2"
+    },
+    "recommendations": {
+      "IT": "Conduct and document quarterly privilege audits.",
+      "Legal": "Ensure admin access policies are supported by contracts.",
+      "Compliance": "Log review dates and actions in compliance tracker."
+    }
+  },
+  "system_patches_update_frequency_days": {
+    "cyber_risk": "Medium",
+    "recommendation": "Apply critical system patches within 30 days.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.308(a)(1)(ii)(B)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 6.2",
+      "SOC 2": "SOC 2 reference: CC7.1"
+    },
+    "recommendations": {
+      "IT": "Track patch management using automated tools.",
+      "Legal": "Ensure SLAs require vendors to patch in under 30 days.",
+      "Compliance": "Monitor patch status during quarterly reviews."
+    }
+  },
+  "unauthorized_access_monitoring": {
+    "cyber_risk": "Medium",
+    "recommendation": "Monitor systems for unauthorized access attempts.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.308(a)(1)(ii)(D)",
+      "SOC 2": "SOC 2 reference: CC7.4"
+    },
+    "recommendations": {
+      "IT": "Enable SIEM alerts and anomaly detection for access logs.",
+      "Legal": "Review monitoring language in security/privacy policies.",
+      "Compliance": "Ensure alerts are part of audit trail review."
+    }
+  },
+  "audit_logs_protected_from_modification": {
+    "cyber_risk": "Medium",
+    "recommendation": "Protect audit logs from unauthorized changes.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.312(b)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 10",
+      "SOC 2": "SOC 2 reference: CC7.4"
+    },
+    "recommendations": {
+      "IT": "Use append-only log storage and WORM drives where possible.",
+      "Legal": "Ensure tamper-evidence policies are documented for regulators.",
+      "Compliance": "Validate log immutability during risk assessments."
+    }
+  },
+  "phishing_simulation_frequency_days": {
+    "cyber_risk": "Medium",
+    "recommendation": "Conduct phishing simulations every 6 months.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "SOC 2": "SOC 2 reference: CC1.4"
+    },
+    "recommendations": {
+      "IT": "Schedule realistic simulations and track user clicks.",
+      "Legal": "Ensure no employee rights are violated during simulations.",
+      "Compliance": "Report participation and improvements over time."
+    }
+  },
+  "external_service_provider_agreements_in_place": {
+    "cyber_risk": "Medium",
+    "recommendation": "Sign contracts with external vendors regarding data security responsibilities.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "GDPR": "GDPR reference: Article 28",
+      "SOC 2": "SOC 2 reference: CC9.2"
+    },
+    "recommendations": {
+      "IT": "Review third-party security practices against contract terms.",
+      "Legal": "Ensure DPAs and SLAs include security clauses.",
+      "Compliance": "Maintain a vendor risk register with signed contracts."
+    }
+  },
+  "encryption_key_management_policy_defined": {
+    "cyber_risk": "Medium",
+    "recommendation": "Define a key management policy for encryption keys.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.312(a)(2)(iv)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 3.6"
+    },
+    "recommendations": {
+      "IT": "Use hardware security modules (HSMs) for key storage.",
+      "Legal": "Ensure policies account for data export controls.",
+      "Compliance": "Include key lifecycle policies in compliance checks."
+    }
+  },
+  "physical_access_controls_to_data_centers": {
+    "cyber_risk": "Medium",
+    "recommendation": "Restrict physical access to data centers to authorized personnel only.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "HIPAA": "HIPAA reference: 164.310(a)(1)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 9",
+      "SOC 2": "SOC 2 reference: CC6.1"
+    },
+    "recommendations": {
+      "IT": "Implement badge access, video monitoring, and access logs.",
+      "Legal": "Document controls for client audits or regulators.",
+      "Compliance": "Include physical access checks in annual audits."
+    }
+  },
+  "environmental_controls_in_data_centers": {
+    "cyber_risk": "Medium",
+    "recommendation": "Implement temperature, humidity, and fire controls in server rooms.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "SOC 2": "SOC 2 reference: CC7.2"
+    },
+    "recommendations": {
+      "IT": "Ensure HVAC and fire suppression systems are monitored.",
+      "Legal": "Include environmental control responsibilities in facility SLAs.",
+      "Compliance": "Verify system logs during annual assessments."
+    }
+  },
+  "secure_disposal_of_media": {
+    "cyber_risk": "Medium",
+    "recommendation": "Securely dispose of old hard drives and other media containing sensitive data.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "GDPR": "GDPR reference: Article 32",
+      "HIPAA": "HIPAA reference: 164.310(d)(2)(i)",
+      "PCI-DSS": "PCI-DSS reference: Requirement 9.8"
+    },
+    "recommendations": {
+      "IT": "Use certified destruction services for physical media.",
+      "Legal": "Ensure disposal procedures are contractually defined.",
+      "Compliance": "Track disposal events in audit logs."
+    }
+  },
+  "privacy_policy_publicly_available": {
+    "cyber_risk": "Medium",
+    "recommendation": "Publish a public privacy policy for personal data processing.",
+    "impact_estimate_usd": 20000,
+    "legal_risk": {
+      "GDPR": "GDPR reference: Articles 12-14"
+    },
+    "recommendations": {
+      "IT": "Ensure the website and applications link to the latest privacy policy.",
+      "Legal": "Draft policy content to meet GDPR transparency standards.",
+      "Compliance": "Review and update annually, track revisions."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# Reports and images
+/reports/*
+!reports/.gitkeep
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# OS-specific
+.DS_Store
+Thumbs.db

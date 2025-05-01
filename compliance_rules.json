@@ -1,0 +1,362 @@
+{
+  "password_length": {
+    "required_value": 12,
+    "description": "Minimum password length should be 12 characters.",
+    "frameworks": ["GDPR", "HIPAA", "PCI-DSS", "SOC 2"],
+    "control_group": "Access Control",
+    "severity": "High",
+    "reference": {
+      "GDPR": "Article 32",
+      "PCI-DSS": "Requirement 8",
+      "HIPAA": "164.312(a)(2)(i)",
+      "SOC 2": "CC6.1"
+    }
+  },
+  "mfa_enabled": {
+    "required_value": 1,
+    "description": "Multi-Factor Authentication must be enabled for all accounts.",
+    "frameworks": ["HIPAA", "PCI-DSS", "SOC 2"],
+    "control_group": "Access Control",
+    "severity": "Critical",
+    "reference": {
+      "HIPAA": "164.312(d)",
+      "PCI-DSS": "Requirement 8.3",
+      "SOC 2": "CC6.3"
+    }
+  },
+  "session_timeout_minutes": {
+    "required_value": 15,
+    "description": "Session timeout after 15 minutes of inactivity.",
+    "frameworks": ["PCI-DSS", "SOC 2"],
+    "control_group": "Access Control",
+    "severity": "Medium",
+    "reference": {
+      "PCI-DSS": "Requirement 8.1.8",
+      "SOC 2": "CC6.2"
+    }
+  },
+  "account_lockout_threshold": {
+    "required_value": 5,
+    "description": "Account lockout after 5 failed login attempts.",
+    "frameworks": ["PCI-DSS", "SOC 2"],
+    "control_group": "Access Control",
+    "severity": "High",
+    "reference": {
+      "PCI-DSS": "Requirement 8.1.6",
+      "SOC 2": "CC6.2"
+    }
+  },
+  "data_encryption": {
+    "required_value": 1,
+    "description": "Encrypt sensitive data at rest and in transit.",
+    "frameworks": ["GDPR", "HIPAA", "PCI-DSS"],
+    "control_group": "Data Security",
+    "severity": "Critical",
+    "reference": {
+      "GDPR": "Article 32",
+      "HIPAA": "164.312(a)(2)(iv)",
+      "PCI-DSS": "Requirement 3"
+    }
+  },
+  "backup_frequency_days": {
+    "required_value": 7,
+    "description": "Perform system backups at least weekly.",
+    "frameworks": ["GDPR", "HIPAA", "SOC 2"],
+    "control_group": "Business Continuity",
+    "severity": "High",
+    "reference": {
+      "GDPR": "Article 32",
+      "HIPAA": "164.308(a)(7)(ii)(A)",
+      "SOC 2": "CC7.2"
+    }
+  },
+  "log_retention_period_days": {
+    "required_value": 365,
+    "description": "Retain audit logs for at least one year.",
+    "frameworks": ["HIPAA", "SOC 2"],
+    "control_group": "Logging and Monitoring",
+    "severity": "Medium",
+    "reference": {
+      "HIPAA": "164.312(b)",
+      "SOC 2": "CC7.4"
+    }
+  },
+  "dlp_system_enabled": {
+    "required_value": 1,
+    "description": "Deploy Data Loss Prevention (DLP) systems.",
+    "frameworks": ["GDPR", "HIPAA", "SOC 2"],
+    "control_group": "Data Security",
+    "severity": "High",
+    "reference": {
+      "GDPR": "Article 32",
+      "HIPAA": "164.308(a)(1)(ii)(D)",
+      "SOC 2": "CC6.6"
+    }
+  },
+  "employee_training_frequency_days": {
+    "required_value": 365,
+    "description": "Conduct cybersecurity awareness training annually.",
+    "frameworks": ["HIPAA", "SOC 2", "PCI-DSS"],
+    "control_group": "Awareness and Training",
+    "severity": "Medium",
+    "reference": {
+      "HIPAA": "164.308(a)(5)(i)",
+      "SOC 2": "CC1.4",
+      "PCI-DSS": "Requirement 12.6"
+    }
+  },
+  "incident_response_plan_tested": {
+    "required_value": 1,
+    "description": "Test the incident response plan annually.",
+    "frameworks": ["HIPAA", "PCI-DSS", "SOC 2"],
+    "control_group": "Incident Response",
+    "severity": "High",
+    "reference": {
+      "HIPAA": "164.308(a)(6)(ii)",
+      "PCI-DSS": "Requirement 12.10.2",
+      "SOC 2": "CC7.3"
+    }
+  },
+  "third_party_risk_assessment_frequency_days": {
+    "required_value": 365,
+    "description": "Conduct vendor risk assessments annually.",
+    "frameworks": ["GDPR", "HIPAA", "SOC 2"],
+    "control_group": "Vendor Management",
+    "severity": "Medium",
+    "reference": {
+      "GDPR": "Article 28",
+      "HIPAA": "164.308(b)(1)",
+      "SOC 2": "CC9.2"
+    }
+  },
+  "system_access_review_frequency_days": {
+    "required_value": 90,
+    "description": "Review user access rights at least quarterly.",
+    "frameworks": ["HIPAA", "SOC 2"],
+    "control_group": "Access Control",
+    "severity": "Medium",
+    "reference": {
+      "HIPAA": "164.308(a)(4)(ii)(C)",
+      "SOC 2": "CC6.2"
+    }
+  },
+  "vulnerability_scan_frequency_days": {
+    "required_value": 90,
+    "description": "Perform vulnerability scans at least quarterly.",
+    "frameworks": ["PCI-DSS", "SOC 2"],
+    "control_group": "Risk Management",
+    "severity": "High",
+    "reference": {
+      "PCI-DSS": "Requirement 11.2",
+      "SOC 2": "CC7.1"
+    }
+  },
+  "penetration_test_frequency_days": {
+    "required_value": 365,
+    "description": "Conduct penetration testing annually.",
+    "frameworks": ["PCI-DSS", "SOC 2"],
+    "control_group": "Risk Management",
+    "severity": "High",
+    "reference": {
+      "PCI-DSS": "Requirement 11.3",
+      "SOC 2": "CC7.1"
+    }
+  },
+  "data_subject_request_response_days": {
+    "required_value": 30,
+    "description": "Respond to data subject access requests within 30 days.",
+    "frameworks": ["GDPR"],
+    "control_group": "Data Privacy",
+    "severity": "High",
+    "reference": {
+      "GDPR": "Article 12"
+    }
+  },
+  "data_retention_policy_defined": {
+    "required_value": 1,
+    "description": "Define and enforce a data retention policy.",
+    "frameworks": ["GDPR", "HIPAA"],
+    "control_group": "Data Privacy",
+    "severity": "Medium",
+    "reference": {
+      "GDPR": "Article 5",
+      "HIPAA": "164.306(b)"
+    }
+  },
+  "business_continuity_plan_reviewed": {
+    "required_value": 1,
+    "description": "Review business continuity plans annually.",
+    "frameworks": ["SOC 2"],
+    "control_group": "Business Continuity",
+    "severity": "Medium",
+    "reference": {
+      "SOC 2": "CC7.2"
+    }
+  },
+  "disaster_recovery_plan_tested": {
+    "required_value": 1,
+    "description": "Test disaster recovery plans annually.",
+    "frameworks": ["SOC 2"],
+    "control_group": "Business Continuity",
+    "severity": "High",
+    "reference": {
+      "SOC 2": "CC7.2"
+    }
+  },
+  "portable_device_encryption": {
+    "required_value": 1,
+    "description": "Encrypt portable devices like laptops and mobile devices.",
+    "frameworks": ["GDPR", "HIPAA"],
+    "control_group": "Data Security",
+    "severity": "High",
+    "reference": {
+      "GDPR": "Article 32",
+      "HIPAA": "164.310(d)(2)(iv)"
+    }
+  },
+  "antivirus_installed": {
+    "required_value": 1,
+    "description": "Install and maintain antivirus software.",
+    "frameworks": ["PCI-DSS", "HIPAA"],
+    "control_group": "System Protection",
+    "severity": "Medium",
+    "reference": {
+      "PCI-DSS": "Requirement 5",
+      "HIPAA": "164.308(a)(5)(B)"
+    }
+  },
+  "firewall_enabled": {
+    "required_value": 1,
+    "description": "Enable firewalls to protect network perimeters.",
+    "frameworks": ["PCI-DSS", "HIPAA"],
+    "control_group": "System Protection",
+    "severity": "Critical",
+    "reference": {
+      "PCI-DSS": "Requirement 1",
+      "HIPAA": "164.312(c)(1)"
+    }
+  },
+  "admin_account_review_frequency_days": {
+    "required_value": 90,
+    "description": "Review admin account usage quarterly.",
+    "frameworks": ["SOC 2"],
+    "control_group": "Access Control",
+    "severity": "Medium",
+    "reference": {
+      "SOC 2": "CC6.2"
+    }
+  },
+  "system_patches_update_frequency_days": {
+    "required_value": 30,
+    "description": "Apply critical system patches within 30 days.",
+    "frameworks": ["HIPAA", "PCI-DSS", "SOC 2"],
+    "control_group": "System Protection",
+    "severity": "High",
+    "reference": {
+      "HIPAA": "164.308(a)(1)(ii)(B)",
+      "PCI-DSS": "Requirement 6.2",
+      "SOC 2": "CC7.1"
+    }
+  },
+  "unauthorized_access_monitoring": {
+    "required_value": 1,
+    "description": "Monitor systems for unauthorized access attempts.",
+    "frameworks": ["HIPAA", "SOC 2"],
+    "control_group": "Logging and Monitoring",
+    "severity": "High",
+    "reference": {
+      "HIPAA": "164.308(a)(1)(ii)(D)",
+      "SOC 2": "CC7.4"
+    }
+  },
+  "audit_logs_protected_from_modification": {
+    "required_value": 1,
+    "description": "Protect audit logs from unauthorized changes.",
+    "frameworks": ["HIPAA", "SOC 2", "PCI-DSS"],
+    "control_group": "Logging and Monitoring",
+    "severity": "Critical",
+    "reference": {
+      "HIPAA": "164.312(b)",
+      "SOC 2": "CC7.4",
+      "PCI-DSS": "Requirement 10"
+    }
+  },
+  "phishing_simulation_frequency_days": {
+    "required_value": 180,
+    "description": "Conduct phishing simulations every 6 months.",
+    "frameworks": ["SOC 2"],
+    "control_group": "Awareness and Training",
+    "severity": "Medium",
+    "reference": {
+      "SOC 2": "CC1.4"
+    }
+  },
+  "external_service_provider_agreements_in_place": {
+    "required_value": 1,
+    "description": "Sign contracts with external vendors regarding data security responsibilities.",
+    "frameworks": ["GDPR", "SOC 2"],
+    "control_group": "Vendor Management",
+    "severity": "Medium",
+    "reference": {
+      "GDPR": "Article 28",
+      "SOC 2": "CC9.2"
+    }
+  },
+  "encryption_key_management_policy_defined": {
+    "required_value": 1,
+    "description": "Define a key management policy for encryption keys.",
+    "frameworks": ["PCI-DSS", "HIPAA"],
+    "control_group": "Data Security",
+    "severity": "High",
+    "reference": {
+      "PCI-DSS": "Requirement 3.6",
+      "HIPAA": "164.312(a)(2)(iv)"
+    }
+  },
+  "physical_access_controls_to_data_centers": {
+    "required_value": 1,
+    "description": "Restrict physical access to data centers to authorized personnel only.",
+    "frameworks": ["HIPAA", "PCI-DSS", "SOC 2"],
+    "control_group": "Physical Security",
+    "severity": "Critical",
+    "reference": {
+      "HIPAA": "164.310(a)(1)",
+      "PCI-DSS": "Requirement 9",
+      "SOC 2": "CC6.1"
+    }
+  },
+  "environmental_controls_in_data_centers": {
+    "required_value": 1,
+    "description": "Implement temperature, humidity, and fire controls in server rooms.",
+    "frameworks": ["SOC 2"],
+    "control_group": "Physical Security",
+    "severity": "Low",
+    "reference": {
+      "SOC 2": "CC7.2"
+    }
+  },
+  "secure_disposal_of_media": {
+    "required_value": 1,
+    "description": "Securely dispose of old hard drives and other media containing sensitive data.",
+    "frameworks": ["HIPAA", "PCI-DSS", "GDPR"],
+    "control_group": "Data Security",
+    "severity": "High",
+    "reference": {
+      "HIPAA": "164.310(d)(2)(i)",
+      "PCI-DSS": "Requirement 9.8",
+      "GDPR": "Article 32"
+    }
+  },
+  "privacy_policy_publicly_available": {
+    "required_value": 1,
+    "description": "Publish a public privacy policy for personal data processing.",
+    "frameworks": ["GDPR"],
+    "control_group": "Data Privacy",
+    "severity": "Medium",
+    "reference": {
+      "GDPR": "Articles 12-14"
+    }
+  }
+}
+
+
